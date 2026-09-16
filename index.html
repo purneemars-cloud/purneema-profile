@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Purneema R.S. | Portfolio</title>
+  <meta name="description" content="Portfolio of Purneema R.S. — Business Economics graduate, MBA Finance, PGDBM, and culinary arts professional.">
+  <style>
+    :root{
+      --ink:#382d35; --muted:#756a72; --cream:#fffaf5; --rose:#c9798e;
+      --rose-dark:#a95870; --petal:#f7dbe3; --sage:#8ea38c; --gold:#c99d5d;
+      --card:rgba(255,255,255,.78); --shadow:0 18px 50px rgba(104,65,77,.12);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Georgia,"Times New Roman",serif;color:var(--ink);background:var(--cream);
+      line-height:1.7;overflow-x:hidden;
+    }
+    body:before{
+      content:"";position:fixed;inset:0;pointer-events:none;opacity:.25;
+      background-image:radial-gradient(#d8b2bd 1px,transparent 1px);background-size:28px 28px;z-index:-2;
+    }
+    .flower{
+      position:absolute;font-family:"Segoe UI Symbol",serif;color:var(--rose);opacity:.18;
+      user-select:none;pointer-events:none;line-height:1;
+    }
+    .f1{font-size:10rem;top:4rem;right:-2rem;transform:rotate(18deg)}
+    .f2{font-size:7rem;bottom:5rem;left:-2rem;transform:rotate(-20deg)}
+    .f3{font-size:5rem;top:35%;right:4%;color:var(--sage);opacity:.13}
+    nav{
+      position:fixed;top:0;left:0;width:100%;z-index:20;padding:16px 7%;
+      display:flex;justify-content:space-between;align-items:center;background:rgba(255,250,245,.82);
+      backdrop-filter:blur(14px);border-bottom:1px solid rgba(201,121,142,.14);
+    }
+    .brand{font-weight:bold;letter-spacing:2px;color:var(--rose-dark);font-size:1.05rem}
+    nav ul{display:flex;gap:25px;list-style:none}
+    nav a{color:var(--ink);text-decoration:none;font-size:.9rem}
+    nav a:hover{color:var(--rose-dark)}
+    .hero{min-height:100vh;padding:150px 7% 90px;display:grid;place-items:center;position:relative}
+    .hero-grid{max-width:1120px;width:100%;display:grid;grid-template-columns:1.25fr .75fr;gap:70px;align-items:center}
+    .eyebrow{text-transform:uppercase;letter-spacing:4px;color:var(--rose-dark);font-size:.78rem;margin-bottom:18px}
+    h1{font-size:clamp(3.5rem,8vw,7rem);line-height:.9;font-weight:500}
+    h1 span{color:var(--rose-dark);font-style:italic}
+    .hero p{max-width:650px;margin:28px 0;color:var(--muted);font-size:1.1rem}
+    .buttons{display:flex;gap:14px;flex-wrap:wrap}
+    .btn{padding:12px 22px;border-radius:30px;text-decoration:none;display:inline-block;border:1px solid var(--rose-dark);transition:.25s}
+    .primary{background:var(--rose-dark);color:white}.secondary{color:var(--rose-dark)}
+    .btn:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(169,88,112,.18)}
+    .portrait{
+      width:min(360px,80vw);aspect-ratio:1;border-radius:48% 52% 55% 45% / 45% 48% 52% 55%;
+      background:linear-gradient(145deg,#f4d4dc,#fff2e8);display:grid;place-items:center;
+      box-shadow:var(--shadow);border:10px solid rgba(255,255,255,.7);position:relative;
+    }
+    .portrait:before{content:"✿";font-size:10rem;color:var(--rose);opacity:.65}
+    .portrait:after{content:"P R";position:absolute;bottom:48px;font-size:1.3rem;letter-spacing:9px;color:white}
+    section{padding:100px 7%;position:relative}
+    .wrap{max-width:1120px;margin:auto}
+    .section-head{margin-bottom:45px}
+    .section-head small{color:var(--rose-dark);letter-spacing:3px;text-transform:uppercase}
+    .section-head h2{font-size:clamp(2.2rem,5vw,4rem);font-weight:500;margin-top:6px}
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:35px}
+    .card{
+      background:var(--card);border:1px solid rgba(201,121,142,.15);border-radius:24px;padding:30px;box-shadow:var(--shadow)
+    }
+    .card h3{font-size:1.35rem;color:var(--rose-dark);margin-bottom:14px}
+    .timeline{display:grid;gap:18px}
+    .item{padding:22px 24px;border-left:3px solid var(--rose);background:rgba(255,255,255,.58);border-radius:0 18px 18px 0}
+    .item strong{display:block;font-size:1.05rem}.item span{color:var(--rose-dark);font-size:.9rem}
+    .skills{display:flex;flex-wrap:wrap;gap:12px}
+    .skill{padding:10px 16px;border-radius:999px;background:#f8e4e9;color:#754555;border:1px solid #efd0d8}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+    .project{position:relative;overflow:hidden}
+    .project .icon{font-size:2.3rem;margin-bottom:10px}
+    .quote{background:#f4e4dc;border-radius:30px;padding:55px;text-align:center}
+    .quote p{font-size:1.7rem;font-style:italic;max-width:800px;margin:auto}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+    .contact-link{display:block;text-decoration:none;color:var(--ink);padding:17px 0;border-bottom:1px solid #ead5db}
+    .contact-link b{color:var(--rose-dark);display:block}
+    footer{text-align:center;padding:35px 7%;color:var(--muted);font-size:.85rem;border-top:1px solid #ead5db}
+    @media(max-width:800px){
+      nav ul{display:none}.hero-grid,.about,.two-col,.contact-grid{grid-template-columns:1fr}
+      .hero{text-align:center}.hero p{margin-left:auto;margin-right:auto}.buttons{justify-content:center}
+      .portrait{margin:auto}.hero-grid{gap:45px}
+      section{padding:75px 6%}.quote{padding:35px 22px}.quote p{font-size:1.35rem}
+    }
+  </style>
+</head>
+<body>
+  <div class="flower f1">✿</div><div class="flower f2">❀</div><div class="flower f3">✽</div>
+
+  <nav>
+    <div class="brand">PURNEEMA R.S.</div>
+    <ul>
+      <li><a href="#about">About</a></li><li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li><li><a href="#project">Project</a></li><li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Portfolio • Business • Finance • Creativity</div>
+        <h1>Growing with <span>purpose.</span></h1>
+        <p>
+          I’m <strong>Purneema R.S.</strong> — an MBA Finance professional with a background in
+          Business Economics, Banking Management, finance-related learning and culinary arts.
+          I bring a positive attitude, adaptability and a passion for continuous growth.
+        </p>
+        <div class="buttons">
+          <a class="btn primary" href="#contact">Let's Connect</a>
+          <a class="btn secondary" href="#education">Explore My Journey</a>
+        </div>
+      </div>
+      <div class="portrait" aria-label="Floral profile placeholder"></div>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head"><small>01 · About</small><h2>A little about me</h2></div>
+      <div class="about">
+        <div class="card">
+          <h3>Career Objective</h3>
+          <p>To be associated with a progressive organization that provides a dynamic work sphere where I can use and develop my inherent skills and aptitude, contribute to organizational objectives, and grow toward my career goals.</p>
+        </div>
+        <div class="card">
+          <h3>What I Bring</h3>
+          <p>Teamwork, a positive attitude, knowledge sharing, service-mindedness, adaptability and the ability to understand business structures quickly. I value learning, responsibility and meaningful contribution.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <div class="section-head"><small>02 · Education</small><h2>My learning journey</h2></div>
+      <div class="timeline">
+        <div class="item"><strong>PGDBM — Post Graduate Diploma in Banking Management</strong><span>Times Pro, Coimbatore</span></div>
+        <div class="item"><strong>MBA — Finance</strong><span>Annamalai University (DDE) · 2014–2016 · 62.1%</span></div>
+        <div class="item"><strong>B.A. — Business Economics</strong><span>Ethiraj College for Women, University of Madras · 2011–2014 · 60.8%</span></div>
+        <div class="item"><strong>HSC — Commerce</strong><span>Jai Vikas Higher Secondary School · State Board · 2010 · 71%</span></div>
+        <div class="item"><strong>SSLC</strong><span>Sri Vinayaga Higher Secondary School · State Board · 2008 · 66%</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="section-head"><small>03 · Certifications & Skills</small><h2>Many petals, one journey</h2></div>
+      <div class="two-col">
+        <div class="card">
+          <h3>Certifications</h3>
+          <div class="skills">
+            <span class="skill">NISM VA Series — Mutual Fund Distributors</span>
+            <span class="skill">Diploma in Tally Accountant</span>
+            <span class="skill">Tally.ERP9 GST</span>
+            <span class="skill">Diploma in Food Preparation & Culinary Arts — Patisserie</span>
+            <span class="skill">City & Guilds UK</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Technical & Soft Skills</h3>
+          <div class="skills">
+            <span class="skill">MS Word</span><span class="skill">MS PowerPoint</span>
+            <span class="skill">Personality Development</span><span class="skill">Team Player</span>
+            <span class="skill">Business Adaptability</span><span class="skill">Product & Process Knowledge</span>
+            <span class="skill">Regulatory Awareness</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="project">
+    <div class="wrap">
+      <div class="section-head"><small>04 · Experience & Project</small><h2>Where learning meets action</h2></div>
+      <div class="two-col">
+        <div class="card project">
+          <div class="icon">🌸</div><h3>Academic Project</h3>
+          <p><strong>“A Study on Buying Behavior of Consumers Towards Life Insurance”</strong></p>
+        </div>
+        <div class="card project">
+          <div class="icon">🌿</div><h3>Internships</h3>
+          <p>One-month internship at <strong>Reliance Life Insurance</strong>, and one-month internship at <strong>DOCOMO Telecommunication</strong> in the SME department.</p>
+        </div>
+        <div class="card project">
+          <div class="icon">🌼</div><h3>Co-curricular Activities</h3>
+          <p>Active member of Rotaract and Environmental Club; former Union Member of Ethiraj College Hostel.</p>
+        </div>
+        <div class="card project">
+          <div class="icon">🌺</div><h3>Personal Strengths</h3>
+          <p>Positive attitude, knowledge sharing, passion for service, quick grasp of business structures and ability to work in a dynamic environment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="quote">
+        <p>“Like a flower, growth is a journey of learning, adapting and becoming.”</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="section-head"><small>05 · Contact</small><h2>Let's grow something meaningful.</h2></div>
+      <div class="contact-grid">
+        <div class="card">
+          <a class="contact-link" href="tel:+919629234543"><b>Phone</b>+91 96292 34543</a>
+          <a class="contact-link" href="mailto:purneemars1812@gmail.com"><b>Email</b>purneemars1812@gmail.com</a>
+        </div>
+        <div class="card">
+          <div class="contact-link"><b>Location</b>Coimbatore, Tamil Nadu, India</div>
+          <div class="contact-link"><b>Languages</b>English & Tamil</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>© 2026 Purneema R.S. · Crafted with a little 🌸 and a lot of purpose.</footer>
+</body>
+</html>
